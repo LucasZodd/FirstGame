@@ -1,5 +1,6 @@
 import forca
 import adivinacao
+import sys
 
 def pick_jogos():
 
@@ -7,25 +8,25 @@ def pick_jogos():
     print("*********************************")
     print("***********Bem-Vindo*************")
     print("!!!!!!!!!!Pick-Jogos!!!!!!!!!!!!!")
-    print("Escolha seu jogo")
     print("*********************************")
     print("*********************************")
 
-    print("(1) Forca (2) Advinhação")
+    print("(1) Forca (2) Advinhação (3) Fechar o Pick-Jogos")
 
-    jogo= int(input("Escolha o jogo: "))
+    jogo= int(input("Escolha um jogo: "))
 
     if jogo == 1:
         print("Abrindo jogo de Forca")
         forca.jogar()
-    elif jogo == 2:
-        print("Abrindo jogo de Advinhação")
-        adivinacao.jogar()
+        if jogo == 2:
+            print("Abrindo jogo de Advinhação")
+            adivinacao.jogar()
+    else:
+        print("*********************************")
+        print("Fechando o Pick-Jogos")
+        print("*********************************")
+        sys.exit()
 
-
-    print("*********************************")
-    print("Fechando o Pick-Jogos")
-    print("*********************************")
 
 if __name__  == "__main__":
     pick_jogos()

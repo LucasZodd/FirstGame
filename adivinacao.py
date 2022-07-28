@@ -97,7 +97,11 @@ def continuar_jogando():
     elif continua == 2:
         jogos.pick_jogos() 
     else:
+        print("*********************************")
+        print("Fechando o Pick-Jogos")
+        print("*********************************")
         sys.exit()
+        
     
 if __name__  == "__main__":
     jogar()
